@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #4a4949;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-text {
+  font-size: 1rem;
+  position: relative;
+  animation: changeColor 2s ease-in-out infinite alternate;
+  font-family: "Mukta", sans-serif;
+}
+.loader-text h1 {
+  letter-spacing: 0.1em;
+}
+.loader-text h2 {
+  letter-spacing: 0.3em;
+  font-size: 8px;
+  font-weight: bold;
+}
+@keyframes changeColor {
+  0% {
+    color: #4a4949; /* Ash color */
+    top: 0;
+  }
+  100% {
+    color: #b752d6; /* White color */
+    top: -100%; /* Move the text 100% up */
+  }
+}
+
+/* Services.css */
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.bouncing {
+  animation: bounce 0.5s infinite;
+}
